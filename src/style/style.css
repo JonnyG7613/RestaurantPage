@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+}
+
+#review {
+    font-size: 1.2em;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
