@@ -19,3 +19,9 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+.menuItem {
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+}

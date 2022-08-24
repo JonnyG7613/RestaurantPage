@@ -1,2 +1,4 @@
 import './style/style.css'
-import './initialpage.js'
+import './homepage.js'
+import './menupage.js'
+import './contact.js'
