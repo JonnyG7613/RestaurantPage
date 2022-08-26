@@ -1,4 +1,4 @@
-function splashPage() {
+export function homePage() {
     const title = document.createElement('div')
     const backgroundImage = document.createElement('img')
     const review = document.createElement('div')
@@ -12,13 +12,11 @@ function splashPage() {
     review.setAttribute('id', 'review')
     review.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iure sequi quod? Laudantium totam blanditiis et dolor ab enim tempore, explicabo temporibus quibusdam, aperiam accusamus provident dolorum doloribus assumenda repudiandae ?'
 
-    console.log(title)
-
     return { title, backgroundImage, review }
 }
 
-const SPLASHPAGE = splashPage()
+// const SPLASHPAGE = splashPage()
 
-for (e in SPLASHPAGE) {
-    document.body.appendChild(SPLASHPAGE[e])
-}
+// for (e in SPLASHPAGE) {
+//     document.body.appendChild(SPLASHPAGE[e])
+// }

@@ -1,4 +1,4 @@
-function splashPage() {
+export function menuPage() {
     const title = document.createElement('div')
     const backgroundImage = document.createElement('img')
     const menuItem1 = document.createElement('div')
@@ -67,8 +67,8 @@ function splashPage() {
     return { title, backgroundImage, menuItem1, menuItem2, menuItem3, menuItem4, menuItem5, menuItem6, menuItem7, menuItem8 }
 }
 
-const SPLASHPAGE = splashPage()
+// const SPLASHPAGE = splashPage()
 
-for (e in SPLASHPAGE) {
-    document.body.appendChild(SPLASHPAGE[e])
-}
+// for (e in SPLASHPAGE) {
+//     document.body.appendChild(SPLASHPAGE[e])
+// }

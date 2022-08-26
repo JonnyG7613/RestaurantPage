@@ -1,4 +1,4 @@
-function splashPage() {
+export function contactPage() {
     const form = document.createElement('form')
     const emailLabel = document.createElement('label')
     const emailInput = document.createElement('input')
@@ -42,6 +42,6 @@ function splashPage() {
 
 }
 
-const SPLASHPAGE = splashPage()
+// const SPLASHPAGE = splashPage()
 
-document.body.appendChild(SPLASHPAGE)
+// document.body.appendChild(SPLASHPAGE)
