@@ -6,23 +6,24 @@ import { contactPage } from './contact.js'
 const homepage = document.createElement('button')
 const menupage = document.createElement('button')
 const contact = document.createElement('button')
+const content = document.getElementById('content')
 
 let homepageTab = {
     class: 'tabLinks',
     onclick: 'openPage("home")',
-    innerText: 'Home'
+    innerHTML: 'Home'
 }
 
 let menupageTab = {
     class: 'tabLinks',
-    onclick: 'openPage("menu")',
-    innerText: 'Menu'
+    addEventListener: ('click', openPage("menu")),
+    innerHTML: 'Menu'
 }
 
 let contactsTab = {
     class: 'tabLinks',
     onclick: 'openPage("contactUs")',
-    innerText: 'Contact Us'
+    innerHTML: 'Contact Us'
 }
 
 let homepageContent = {
@@ -38,7 +39,6 @@ let menupageContent = {
 let contactContent = {
     id: 'contact',
     class: 'tabContent',
-    // innerHTML: 
 }
 
 console.log(contactPage())
@@ -58,9 +58,27 @@ Object.keys(contactsTab).forEach(e => {
 })
 
 function openPage(tab) {
-    console.log(`openPage function ${tab}`)
-}
+    content.append('')
+    switch (tab) {
+        case 'contactUs':
+            content.appendChild(contactPage())
+            break
+        case 'home':
+            Object.keys(homePage()).forEach(e => {
+                content.appendChild(e)
+            })
+            break
+        case 'menu':
+            Object.keys(menuPage).forEach(e => {
+                content.appendChild(menuPage[e])
+            })
+            console.log('cat')
+            break
+    }
 
-document.body.appendChild(homepage)
-document.body.appendChild(menupage)
-document.body.appendChild(contact)
+}
+console.log('test')
+
+content.appendChild(homepage)
+content.appendChild(menupage)
+content.appendChild(contact)
