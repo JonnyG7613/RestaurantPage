@@ -4,7 +4,7 @@ export function homePage() {
     const review = document.createElement('div')
 
     title.setAttribute('id', 'header')
-    title.innerText = 'Generic Restaurant House'
+    title.innerText = 'Generic Restaurant'
 
     backgroundImage.setAttribute('id', 'backgroundImage')
     backgroundImage.setAttribute('src', '/src/D69aQ0gk_400x400 (1).jpg')

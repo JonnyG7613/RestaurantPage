@@ -3,27 +3,28 @@ import { homePage } from './homepage.js'
 import { menuPage } from './menupage.js'
 import { contactPage } from './contact.js'
 
-const homepage = document.createElement('button')
-const menupage = document.createElement('button')
-const contact = document.createElement('button')
+const homepageButton = document.createElement('button')
+const menupageButton = document.createElement('button')
+const contactButton = document.createElement('button')
 const content = document.getElementById('content')
+
+const home = homePage()
+const menu = menuPage()
 
 let homepageTab = {
     class: 'tabLinks',
-    onclick: 'openPage("home")',
-    innerHTML: 'Home'
+    onclick: openPage('home')
+
 }
 
 let menupageTab = {
     class: 'tabLinks',
-    addEventListener: ('click', openPage("menu")),
-    innerHTML: 'Menu'
+    onclick: 'openPage("menu")',
 }
 
 let contactsTab = {
     class: 'tabLinks',
     onclick: 'openPage("contactUs")',
-    innerHTML: 'Contact Us'
 }
 
 let homepageContent = {
@@ -41,44 +42,50 @@ let contactContent = {
     class: 'tabContent',
 }
 
-console.log(contactPage())
-console.log(homePage())
-console.log(menuPage())
-
 Object.keys(homepageTab).forEach(e => {
-    homepage.setAttribute(e, homepageTab[e])
+    homepageButton.setAttribute(e, homepageTab[e])
 })
+homepageButton.addEventListener('click', openPage("home"))
 
 Object.keys(menupageTab).forEach(e => {
-    menupage.setAttribute(e, menupageTab[e])
+    menupageButton.setAttribute(e, menupageTab[e])
 })
 
 Object.keys(contactsTab).forEach(e => {
-    contact.setAttribute(e, contactsTab[e])
+    contactButton.setAttribute(e, contactsTab[e])
 })
 
+Object.keys(homePage).forEach(e => {
+    content.appendChild(homePage[e])
+})
+
+content.appendChild(homepageButton)
+content.appendChild(menupageButton)
+content.appendChild(contactButton)
+
 function openPage(tab) {
-    content.append('')
+    content.innerHTML = ''
+    content.appendChild(homepageButton)
+    content.appendChild(menupageButton)
+    content.appendChild(contactButton)
     switch (tab) {
         case 'contactUs':
             content.appendChild(contactPage())
             break
         case 'home':
-            Object.keys(homePage()).forEach(e => {
-                content.appendChild(e)
+            Object.keys(home).forEach(e => {
+                content.appendChild(home[e])
             })
             break
         case 'menu':
-            Object.keys(menuPage).forEach(e => {
-                content.appendChild(menuPage[e])
+            Object.keys(menu).forEach(e => {
+                content.appendChild(menu[e])
             })
-            console.log('cat')
             break
     }
 
 }
-console.log('test')
 
-content.appendChild(homepage)
-content.appendChild(menupage)
-content.appendChild(contact)
+
+openPage('home')
+openPage('menu')

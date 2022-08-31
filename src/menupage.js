@@ -1,6 +1,6 @@
 export function menuPage() {
     const title = document.createElement('div')
-    const backgroundImage = document.createElement('img')
+    // const backgroundImage = document.createElement('img')
     const menuItem1 = document.createElement('div')
     const menuItem2 = document.createElement('div')
     const menuItem3 = document.createElement('div')
@@ -21,8 +21,8 @@ export function menuPage() {
     title.setAttribute('id', 'header')
     title.innerText = 'MENU'
 
-    backgroundImage.setAttribute('id', 'backgroundImage')
-    backgroundImage.setAttribute('src', '/src/D69aQ0gk_400x400 (1).jpg')
+    // backgroundImage.setAttribute('id', 'backgroundImage')
+    // backgroundImage.setAttribute('src', '/src/D69aQ0gk_400x400 (1).jpg')
 
     menuItem1.setAttribute('class', 'menuItem')
     menuItem1.innerText = 'Steak'
@@ -64,7 +64,7 @@ export function menuPage() {
     mixedDrink.setAttribute('src', '/src/style/food/andreas-m-Ug8GLlQT1oE-unsplash.jpg')
     menuItem8.appendChild(mixedDrink)
 
-    return { title, backgroundImage, menuItem1, menuItem2, menuItem3, menuItem4, menuItem5, menuItem6, menuItem7, menuItem8 }
+    return { title, menuItem1, menuItem2, menuItem3, menuItem4, menuItem5, menuItem6, menuItem7, menuItem8 }
 }
 
 // const SPLASHPAGE = splashPage()
