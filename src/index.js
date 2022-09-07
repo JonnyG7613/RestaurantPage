@@ -11,10 +11,19 @@ const content = document.getElementById('content')
 const home = homePage()
 const menu = menuPage()
 
+homepageButton.addEventListener('click', () => {
+    content.innerHTML = ''
+    content.appendChild(homepageButton)
+    content.appendChild(menupageButton)
+    content.appendChild(contactButton)
+    Object.keys(home).forEach(e => {
+        content.appendChild(home[e])
+    })
+})
+
 let homepageTab = {
     class: 'tabLinks',
-    onclick: openPage('home')
-
+    // onclick: 'openPage("home")'
 }
 
 let menupageTab = {
