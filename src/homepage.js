@@ -14,9 +14,3 @@ export function homePage() {
 
     return { title, backgroundImage, review }
 }
-
-// const SPLASHPAGE = splashPage()
-
-// for (e in SPLASHPAGE) {
-//     document.body.appendChild(SPLASHPAGE[e])
-// }

@@ -41,7 +41,3 @@ export function contactPage() {
     return form
 
 }
-
-// const SPLASHPAGE = splashPage()
-
-// document.body.appendChild(SPLASHPAGE)

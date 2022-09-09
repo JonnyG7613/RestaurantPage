@@ -66,9 +66,3 @@ export function menuPage() {
 
     return { title, menuItem1, menuItem2, menuItem3, menuItem4, menuItem5, menuItem6, menuItem7, menuItem8 }
 }
-
-// const SPLASHPAGE = splashPage()
-
-// for (e in SPLASHPAGE) {
-//     document.body.appendChild(SPLASHPAGE[e])
-// }

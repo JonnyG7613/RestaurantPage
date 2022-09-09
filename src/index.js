@@ -21,48 +21,32 @@ homepageButton.addEventListener('click', () => {
     })
 })
 
-let homepageTab = {
-    class: 'tabLinks',
-    // onclick: 'openPage("home")'
-}
-
-let menupageTab = {
-    class: 'tabLinks',
-    onclick: 'openPage("menu")',
-}
-
-let contactsTab = {
-    class: 'tabLinks',
-    onclick: 'openPage("contactUs")',
-}
-
-let homepageContent = {
-    id: 'home',
-    class: 'tabContent'
-}
-
-let menupageContent = {
-    id: 'menu',
-    class: 'tabContent'
-}
-
-let contactContent = {
-    id: 'contact',
-    class: 'tabContent',
-}
-
-Object.keys(homepageTab).forEach(e => {
-    homepageButton.setAttribute(e, homepageTab[e])
-})
-homepageButton.addEventListener('click', openPage("home"))
-
-Object.keys(menupageTab).forEach(e => {
-    menupageButton.setAttribute(e, menupageTab[e])
+menupageButton.addEventListener('click', () => {
+    content.innerHTML = ''
+    content.appendChild(homepageButton)
+    content.appendChild(menupageButton)
+    content.appendChild(contactButton)
+    Object.keys(menu).forEach(e => {
+        content.appendChild(menu[e])
+    })
 })
 
-Object.keys(contactsTab).forEach(e => {
-    contactButton.setAttribute(e, contactsTab[e])
+contactButton.addEventListener('click', () => {
+    content.innerHTML = ''
+    content.appendChild(homepageButton)
+    content.appendChild(menupageButton)
+    content.appendChild(contactButton)
+    content.appendChild(contactPage())
 })
+
+homepageButton.setAttribute('class', 'tabLinks')
+homepageButton.innerText = 'Home'
+
+contactButton.setAttribute('class', 'tabLinks')
+menupageButton.innerText = 'Menu'
+
+menupageButton.setAttribute('class', 'tabLinks')
+contactButton.innerText = 'Contact Us'
 
 Object.keys(homePage).forEach(e => {
     content.appendChild(homePage[e])
@@ -97,4 +81,3 @@ function openPage(tab) {
 
 
 openPage('home')
-openPage('menu')
